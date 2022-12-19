@@ -1,0 +1,75 @@
+.content{
+    background: $gradient-overlay-bg;
+    position: relative;
+    height: $height-content;
+    width: 100%;
+    padding:calc(15rem - $height-header) 0;
+    &__container{
+        height: 100%;
+       display: flex;
+       flex-direction: row;
+       margin:0 calc((100vw - ($width-card * 3 + 2 * 2rem)) / 2);
+       justify-content: center;
+       &--item{
+        padding:0 10px;
+        letter-spacing: 12;
+
+        h1{
+                font-weight: 300;
+                font-size: 65px;
+                line-height: 100.5%;
+                font-style: italic;
+                text-transform: uppercase;
+        }
+
+        h6{
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 154.5%;
+                letter-spacing: 0.8em;
+                color: rgba(255, 255, 255, 0.55);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.17);
+                width: 59%;
+                margin-bottom: 30px;
+        }
+
+       }
+    }
+    &__card {
+       position: absolute;
+       display: flex;
+       gap:2rem;
+       left: calc((100vw - ($width-card * 3 + 2 * 2rem)) / 2);
+       top: calc($height-content - 1rem);
+    }
+}
+
+.box {
+    height: 100%;
+}
+
+.text-animation {
+    color: #999;
+    font-size: 16px;
+}
+#flip {
+    height: 60px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#flip>div>h1 {
+    text-transform: uppercase;
+    font-style: italic;
+    height: 38px;
+    width: 350px;
+    margin-bottom: 47px;
+    display: inline-block;
+    // animation: text-focus-in 3s linear infinite;
+}
+
+#flip div:first-child {
+    animation: show 9s linear infinite;
+}
+
+

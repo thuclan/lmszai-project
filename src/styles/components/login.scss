@@ -1,0 +1,61 @@
+.login {
+    display: flex;
+    height:100vh;
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding:30px 100px;
+        p{
+            margin-top:100px;
+            font-size: 26px;
+            line-height: 137%;
+            color:$color-primary;
+        }
+
+    }
+
+    &__right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background:$color-primary;
+        .btn-group{
+            display: flex;
+            gap:12px;
+            flex-direction: column;
+
+            .btn-google {
+                background: #DB4437;
+                border: 1px solid #DB4437;
+                :hover{
+                    color:#DB4437;
+                    background: $color-primary;
+                }
+            }
+
+            .btn-facebook {
+                background: #3B5998;
+                    border: 1px solid #3B5998;
+                
+                    :hover {
+                        color: #3B5998;
+                        background: $color-primary;
+                    }
+            }
+
+            .btn-twitter {
+                background: #55ACEE;
+                    border: 1px solid #55ACEE;
+                
+                    :hover {
+                        color: #55ACEE;
+                        background: $color-primary;
+                    }
+            }
+        }
+    }
+}
+

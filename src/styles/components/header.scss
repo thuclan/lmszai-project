@@ -1,0 +1,67 @@
+.header {
+    // position: fixed;
+    width: 100%;
+    height: $height-header;
+    z-index: 10;
+    padding:20px 100px;
+    margin: 0 auto;
+    
+   
+    &__container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0 1.2rem;
+
+        &--logo{
+            font-size: 12px;
+            margin-right: 30px ;
+        }
+
+        &--nav{
+        display: flex;
+        flex: 1 1000px;
+        position:relative;
+        padding:12px 0;
+        align-items: center;
+        
+        &--left{
+            display: flex;
+            align-items: center;
+            margin-right: 18rem;
+            padding-left: 3rem;
+            flex-grow: 2;
+            a {
+                background-color:#fff;
+                margin:12px 0;
+                padding: 8px 20px;
+                font-weight: 600;
+                color:$color-text;
+                border-radius: 4px;
+            }
+                        .ant-input {
+                            color:$color-text-white;
+                            background:transparent ;
+                        }
+        }
+
+        &--right{
+            display: flex;
+            flex-grow:1;
+            justify-content: flex-end;
+            align-items: center;
+            a{
+                font-size: 16px;
+                padding:0 10px;
+                font-weight: 400;
+                color: $color-primary;
+                margin-left:10px;
+                border-radius: 4px;
+            }
+           
+            
+        }
+        }
+    }
+    
+}
