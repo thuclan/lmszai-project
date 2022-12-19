@@ -3,12 +3,32 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^4.8.0",
+    "@reduxjs/toolkit": "^1.9.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "antd": "^5.0.4",
+    "axios": "^1.2.1",
+    "dotenv": "^16.0.3",
+    "eslint": "^7.32.0 || ^8.2.0",
+    "firebase": "^9.15.0",
+    "firebase-tools": "^11.18.0",
+    "node-sass": "6.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
+    "react-firebase-hooks": "^5.1.1",
+    "react-hot-toast": "^2.4.0",
+    "react-icons": "^4.7.1",
+    "react-redux": "^8.0.5",
+    "react-router": "^6.4.5",
+    "react-router-dom": "^6.4.5",
+    "react-scripts": "^5.0.1",
+    "react-use-googlelogin": "^0.12.5",
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0",
+    "styled-components": "^5.3.6",
+    "swiper": "^8.4.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -34,5 +54,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0"
   }
 }
