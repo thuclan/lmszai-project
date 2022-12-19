@@ -1,12 +1,8 @@
 import apiCaller from '../helpers/axios';
 
-const find = async () => {
-  return await apiCaller('/posts');
-};
+const find = async () => await apiCaller('/posts');
 
-const findById = async (id) => {
-  return await apiCaller(`/posts/${id}`);
-};
+const findById = async (id) => await apiCaller(`/posts/${id}`);
 
 /* const findCategories = async () => {
   return await apiCaller("/posts/categories");
@@ -22,14 +18,12 @@ const update = async ({ id, data }) => {
   return await apiCaller(`/posts/${id}`, 'put', formData);
 };
 
-const __delete = async (id) => {
-  return await apiCaller(`/posts/${id}`, 'delete');
-};
+const __delete = async (id) => await apiCaller(`/posts/${id}`, 'delete');
 
 export const PostApi = {
   find,
   findById,
   create,
   update,
-  delete: __delete
+  delete: __delete,
 };
