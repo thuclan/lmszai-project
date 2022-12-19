@@ -1,9 +1,9 @@
-import React from "react";
-import HomePage from "./page/home/HomePage";
-import { Route, Routes } from "react-router";
-import LogInPage from "./page/login/login";
-import Product from "./page/product/Product";
-import Layout from "./layout/Layout";
+import React from 'react';
+import { Route, Routes } from 'react-router';
+import HomePage from './page/home/HomePage';
+import LogInPage from './page/login/login';
+import Product from './page/product/Product';
+import Layout from './layout/Layout';
 import {
   About,
   Blog,
@@ -12,8 +12,8 @@ import {
   Forum,
   PrivacyPolicy,
   Support,
-  TermsCondition,
-} from "./components/page";
+  TermsCondition
+} from './components/page';
 
 function App() {
   return (

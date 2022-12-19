@@ -1,12 +1,10 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useRef, useState } from "react";
-import { CaretDownOutlined, SearchOutlined } from "@ant-design/icons";
-import { Button, Dropdown, Input, Space } from "antd";
-import { items, itemsone } from "../../../shared/data/data";
-import { useNavigate } from "react-router";
-import { Link } from "react-router-dom";
-import { logo } from "../../../shared/images";
+import React, { useRef, useState } from 'react';
+import { CaretDownOutlined, SearchOutlined } from '@ant-design/icons';
+import { Button, Dropdown, Input, Space } from 'antd';
+import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
+import { items, itemsone } from '../../../shared/data/data';
+import { logo } from '../../../shared/images';
 
 function Header() {
   const navigate = useNavigate();
@@ -30,7 +28,7 @@ function Header() {
   // }, []);
 
   const handleLogin = () => {
-    navigate("/login");
+    navigate('/login');
   };
 
   /* const headerLogIn = (
@@ -61,7 +59,7 @@ function Header() {
             thì không đúng với cái intefrace mà menu khai báo
             okie anh, em cúp nha oke
             */}
-            <Dropdown menu={{ items: itemsone }} trigger={["hover"]}>
+            <Dropdown menu={{ items: itemsone }} trigger={['hover']}>
               <a onClick={(e) => e.preventDefault()}>
                 <Space>
                   Courses
@@ -75,15 +73,15 @@ function Header() {
               placeholder="Search Course..."
               prefix={<SearchOutlined />}
               style={{
-                marginLeft: "30px",
-                borderRadius: "24px",
-                backgroundColor: "transparent",
+                marginLeft: '30px',
+                borderRadius: '24px',
+                backgroundColor: 'transparent'
               }}
             />
           </div>
 
           <div className="header__container--nav--right">
-            <Dropdown menu={{ items: items }} trigger={["hover"]}>
+            <Dropdown menu={{ items }} trigger={['hover']}>
               <a onClick={(e) => e.preventDefault()}>
                 <Space>
                   Pages

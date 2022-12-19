@@ -1,7 +1,7 @@
-import apiCaller from "../helpers/axios";
+import apiCaller from '../helpers/axios';
 
 const find = async () => {
-  return await apiCaller("/posts");
+  return await apiCaller('/posts');
 };
 
 const findById = async (id) => {
@@ -14,16 +14,16 @@ const findById = async (id) => {
 
 const create = async (data) => {
   const formData = JSON.stringify(data);
-  return await apiCaller("/posts/add", "post", formData);
+  return await apiCaller('/posts/add', 'post', formData);
 };
 
 const update = async ({ id, data }) => {
   const formData = JSON.stringify(data);
-  return await apiCaller(`/posts/${id}`, "put", formData);
+  return await apiCaller(`/posts/${id}`, 'put', formData);
 };
 
 const __delete = async (id) => {
-  return await apiCaller(`/posts/${id}`, "delete");
+  return await apiCaller(`/posts/${id}`, 'delete');
 };
 
 export const PostApi = {
@@ -31,5 +31,5 @@ export const PostApi = {
   findById,
   create,
   update,
-  delete: __delete,
+  delete: __delete
 };

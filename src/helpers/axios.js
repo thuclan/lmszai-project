@@ -1,5 +1,5 @@
-import axios from "axios";
-import CONFIG from "../config";
+import axios from 'axios';
+import CONFIG from '../config';
 
 /**
  * @param {String} endpoint
@@ -10,16 +10,16 @@ import CONFIG from "../config";
  */
 const apiCaller = async (endpoint, method, data, extraHeaders) => {
   try {
-    let axiosConfig = {
-      method: method || "get",
-      url: "https://dummyjson.com" + endpoint,
+    const axiosConfig = {
+      method: method || 'get',
+      url: `https://dummyjson.com${endpoint}`,
       data: data || undefined,
-      headers: { ...(extraHeaders || {}) },
+      headers: { ...(extraHeaders || {}) }
     };
     const res = await axios(axiosConfig);
     return res.data;
   } catch (error) {
-    let message = error.message;
+    let { message } = error;
 
     if (error.response?.data?.message) {
       message = error.response.data.message;
@@ -27,7 +27,7 @@ const apiCaller = async (endpoint, method, data, extraHeaders) => {
 
     return {
       success: false,
-      message: { message },
+      message: { message }
     };
   }
 };

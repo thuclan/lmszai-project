@@ -11,7 +11,6 @@
     "antd": "^5.0.4",
     "axios": "^1.2.1",
     "dotenv": "^16.0.3",
-    "eslint": "^7.32.0 || ^8.2.0",
     "firebase": "^9.15.0",
     "firebase-tools": "^11.18.0",
     "node-sass": "6.0.0",
@@ -35,7 +34,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "eslintConfig": {
     "extends": [
@@ -56,10 +58,13 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^7.32.0 || ^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0"
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "prettier": "^2.8.1"
   }
 }

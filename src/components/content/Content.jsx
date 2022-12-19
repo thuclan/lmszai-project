@@ -1,10 +1,10 @@
-import { ArrowRightOutlined } from "@ant-design/icons";
-import { Button } from "antd";
-import React from "react";
-import { cards } from "../../shared/data/cards";
-import { hero } from "../../shared/images";
-import Card from "../card/Card";
-import Courses from "../course/Courses";
+import { ArrowRightOutlined } from '@ant-design/icons';
+import { Button } from 'antd';
+import React from 'react';
+import { cards } from '../../shared/data/cards';
+import { hero } from '../../shared/images';
+import Card from '../card/Card';
+import Courses from '../course/Courses';
 
 function Content() {
   return (
@@ -29,8 +29,8 @@ function Content() {
               </div>
               <h1>Start Here</h1>
               <p>
-                While The Lovely Valley Teems With Vapour Around Me, And The
-                Meridian Sun Strikes The Upper
+                While The Lovely Valley Teems With Vapour Around Me, And The Meridian Sun Strikes
+                The Upper
               </p>
               <Button icon={<ArrowRightOutlined />} className="btn">
                 Browse Course
@@ -43,12 +43,7 @@ function Content() {
         </div>
         <div className="content__card">
           {cards.map((card) => (
-            <Card
-              title={card.title}
-              key={card.key}
-              content={card.content}
-              icon={card.icon}
-            />
+            <Card title={card.title} key={card.key} content={card.content} icon={card.icon} />
           ))}
         </div>
       </div>

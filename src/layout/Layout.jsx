@@ -1,9 +1,9 @@
-import React from "react";
-import { Outlet } from "react-router";
-import Footer from "../components/common/footer/Footer";
-import Header from "../components/common/header/Header";
+import React from 'react';
+import { Outlet } from 'react-router';
+import Footer from '../components/common/footer/Footer';
+import Header from '../components/common/header/Header';
 
-const Layout = ({ children }) => {
+function Layout() {
   return (
     <>
       <Header />
@@ -13,6 +13,6 @@ const Layout = ({ children }) => {
       <Footer />
     </>
   );
-};
+}
 
 export default Layout;

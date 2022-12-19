@@ -1,11 +1,9 @@
-import React from "react";
-import Content from "../../components/content/Content";
+import React from 'react';
+import Content from '../../components/content/Content';
 
 function HomePage() {
   return (
-    <>
-      <Content />
-    </>
+    <Content />
   );
 }
 

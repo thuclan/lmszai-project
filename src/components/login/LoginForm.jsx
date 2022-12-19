@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
-import { Button, Form, Input, Space } from "antd";
+import React from 'react';
+import { Button, Form, Input, Space } from 'antd';
 /* import { FacebookOutlined, GoogleOutlined } from "@ant-design/icons";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "../../utils/firebase"; */
@@ -20,23 +20,23 @@ function LoginForm() {
     }
   }; */
   const onFinish = (values) => {
-    console.log("Received values of form: ", values);
+    console.log('Received values of form: ', values);
   };
 
   const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
+    console.log('Failed:', errorInfo);
   };
   return (
     <Form
       name="basic"
       labelCol={{
-        span: 8,
+        span: 8
       }}
       wrapperCol={{
-        span: 16,
+        span: 16
       }}
       initialValues={{
-        remember: true,
+        remember: true
       }}
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
@@ -48,8 +48,8 @@ function LoginForm() {
         rules={[
           {
             required: true,
-            message: "Please input your username!",
-          },
+            message: 'Please input your username!'
+          }
         ]}
       >
         <Input />
@@ -61,8 +61,8 @@ function LoginForm() {
         rules={[
           {
             required: true,
-            message: "Please input your password!",
-          },
+            message: 'Please input your password!'
+          }
         ]}
       >
         <Input.Password />
@@ -73,14 +73,14 @@ function LoginForm() {
         valuePropName="checked"
         wrapperCol={{
           offset: 8,
-          span: 16,
+          span: 16
         }}
       ></Form.Item>
 
       <Form.Item
         wrapperCol={{
           offset: 8,
-          span: 16,
+          span: 16
         }}
       >
         <Space direction="vertical">

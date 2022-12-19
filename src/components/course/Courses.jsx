@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { ProductApi } from "../../api/product";
-import { array } from "../../shared/data/data";
-import Course from "./Course";
+import React, { useEffect, useState } from 'react';
+import { ProductApi } from '../../api/product';
+import { array } from '../../shared/data/data';
+import Course from './Course';
 
 function Courses() {
   const [products, setProducts] = useState([]);
@@ -18,8 +18,8 @@ function Courses() {
   return (
     <div className="courses">
       <Course products={products} content={array[0]} status={false} />
-      <Course products={products} content={array[1]} status={true} />
-      <Course products={products} content={array[2]} status={true} />
+      <Course products={products} content={array[1]} status />
+      <Course products={products} content={array[2]} status />
     </div>
   );
 }

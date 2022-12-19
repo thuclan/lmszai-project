@@ -5,14 +5,14 @@ import {
   AiFillGoogleCircle,
   AiTwotoneMail,
   AiFillAmazonSquare,
-} from "react-icons/ai";
-import { HiLocationMarker, HiPhone } from "react-icons/hi";
-import { RiVisaFill } from "react-icons/ri";
-import { FaCcPaypal, FaCcDiscover } from "react-icons/fa";
-import { Space } from "antd";
-import React from "react";
-import { Link } from "react-router-dom";
-import { logo } from "../../../shared/images";
+} from 'react-icons/ai';
+import { HiLocationMarker, HiPhone } from 'react-icons/hi';
+import { RiVisaFill } from 'react-icons/ri';
+import { FaCcPaypal, FaCcDiscover } from 'react-icons/fa';
+import { Space } from 'antd';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { logo } from '../../../shared/images';
 
 function Footer() {
   return (
@@ -22,8 +22,8 @@ function Footer() {
           <div>
             <img src={logo} alt="" />
             <p>
-              Mere Tranquil Existence, That I Neglect My Talents. I Should Be
-              IncapAble Of Drawing A Single Stroke At The Present
+              Mere Tranquil Existence, That I Neglect My Talents. I Should Be IncapAble Of Drawing A
+              Single Stroke At The Present
             </p>
 
             <Space>

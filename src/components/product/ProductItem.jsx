@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 function ProductItem() {
   const { state } = useLocation(); // <-- access route state
@@ -16,7 +16,7 @@ function ProductItem() {
       <p>{product.price}</p>
     </div>
   ) : (
-    "No item matched/found."
+    'No item matched/found.'
   );
 }
 

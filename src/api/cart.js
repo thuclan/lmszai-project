@@ -1,12 +1,8 @@
-import apiCaller from "../helpers/axios";
+import apiCaller from '../helpers/axios';
 
-const find = async () => {
-  return await apiCaller("/carts");
-};
+const find = async () => await apiCaller('/carts');
 
-const findById = async (id) => {
-  return await apiCaller(`/carts/${id}`);
-};
+const findById = async (id) => await apiCaller(`/carts/${id}`);
 
 /* const findCategories = async () => {
   return await apiCaller("/carts/categories");
@@ -14,22 +10,20 @@ const findById = async (id) => {
 
 const create = async (data) => {
   const formData = JSON.stringify(data);
-  return await apiCaller("/carts/add", "post", formData);
+  return await apiCaller('/carts/add', 'post', formData);
 };
 
 const update = async ({ id, data }) => {
   const formData = JSON.stringify(data);
-  return await apiCaller(`/carts/${id}`, "put", formData);
+  return await apiCaller(`/carts/${id}`, 'put', formData);
 };
 
-const __delete = async (id) => {
-  return await apiCaller(`/carts/${id}`, "delete");
-};
+const __delete = async (id) => await apiCaller(`/carts/${id}`, 'delete');
 
 export const CartApi = {
   find,
   findById,
   create,
   update,
-  delete: __delete,
+  delete: __delete
 };

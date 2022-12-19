@@ -1,11 +1,12 @@
-import React from "react";
-import { Button, Card } from "antd";
-import { items, itemsone } from "../../shared/data/data";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { ArrowRightOutlined } from "@ant-design/icons";
+import React from 'react';
+import { Button, Card } from 'antd';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation, Pagination } from 'swiper';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { ArrowRightOutlined } from '@ant-design/icons';
+import { items, itemsone } from '../../shared/data/data';
+
 function Course(props) {
   const { products, content, status } = props;
   const { Meta } = Card;
@@ -41,7 +42,7 @@ function Course(props) {
           spaceBetween={50}
           slidesPerView={4}
           modules={[Autoplay, Pagination, Navigation]}
-          onSlideChange={() => console.log("slide change")}
+          onSlideChange={() => console.log('slide change')}
           onSwiper={(swiper) => console.log(swiper)}
         >
           {products?.map((product, index) => (
@@ -52,11 +53,7 @@ function Course(props) {
                   hoverable
                   style={{ width: 290, height: 350 }}
                   cover={
-                    <img
-                      alt={product.brand}
-                      src={product.thumbnail}
-                      style={{ height: 200 }}
-                    />
+                    <img alt={product.brand} src={product.thumbnail} style={{ height: 200 }} />
                   }
                 >
                   <Meta
