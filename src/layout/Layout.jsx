@@ -4,15 +4,15 @@ import Footer from '../components/common/footer/Footer';
 import Header from '../components/common/header/Header';
 
 function Layout() {
-    return (
-      <>
-        <Header />
-        <main>
-          <Outlet />
-        </main>
-        <Footer />
-      </>
-    );
+	return (
+		<>
+			<Header />
+			<main>
+				<Outlet />
+			</main>
+			<Footer />
+		</>
+	);
 }
 
 export default Layout;

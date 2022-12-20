@@ -9,21 +9,21 @@ const findById = async (id) => await apiCaller(`/products/${id}`);
 }; */
 
 const create = async (data) => {
-    const formData = JSON.stringify(data);
-    return await apiCaller('/products/add', 'post', formData);
+	const formData = JSON.stringify(data);
+	return await apiCaller('/products/add', 'post', formData);
 };
 
 const update = async ({ id, data }) => {
-    const formData = JSON.stringify(data);
-    return await apiCaller(`/products/${id}`, 'put', formData);
+	const formData = JSON.stringify(data);
+	return await apiCaller(`/products/${id}`, 'put', formData);
 };
 
 const __delete = async (id) => await apiCaller(`/products/${id}`, 'delete');
 
 export const ProductApi = {
-    find,
-    findById,
-    create,
-    update,
-    delete: __delete
+	find,
+	findById,
+	create,
+	update,
+	delete: __delete
 };

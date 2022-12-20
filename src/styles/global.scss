@@ -1,76 +1,76 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,600;1,100;1,400;1,600;1,700&display=swap");
-@import "./utils/variable.scss";
-@import "./utils/keyframe.scss";
-@import "./components/header.scss";
-@import "./components/login.scss";
-@import "./components/content.scss";
-@import "./components/card.scss";
-@import "./components/courses.scss";
-@import "./components/course.scss";
-@import "./components/footer.scss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,600;1,100;1,400;1,600;1,700&display=swap');
+@import './utils/variable.scss';
+@import './utils/keyframe.scss';
+@import './components/header.scss';
+@import './components/login.scss';
+@import './components/content.scss';
+@import './components/card.scss';
+@import './components/courses.scss';
+@import './components/course.scss';
+@import './components/footer.scss';
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 html,
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  margin: 0 auto;
-  background: $gradient-overlay-bg;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+        Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    margin: 0 auto;
+    background: $gradient-overlay-bg;
 }
 
 #root {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 li {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 li:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 main {
-  display: flex;
-  background: $color-primary;
-  flex-direction: column;
-  flex: 1;
+    display: flex;
+    background: $color-primary;
+    flex-direction: column;
+    flex: 1;
 }
 
 .btn {
-  display: flex;
-  align-items: center;
-  background: #5e3fd7;
-  justify-content: center;
-  border-radius: 4px;
-  height: 40px;
-  color: $color-primary;
-  font-weight: 600;
+    display: flex;
+    align-items: center;
+    background: #5e3fd7;
+    justify-content: center;
+    border-radius: 4px;
+    height: 40px;
+    color: $color-primary;
+    font-weight: 600;
 }
 
 .btn:hover {
-  background: $color-primary;
-  color: #5e3fd7;
+    background: $color-primary;
+    color: #5e3fd7;
 }
 
 .btn-view {
-  background: $color-primary;
-  color: #5e3fd7;
-  border: 1px solid #5e3fd7;
+    background: $color-primary;
+    color: #5e3fd7;
+    border: 1px solid #5e3fd7;
 }
 
 .btn-view:hover {
-  background: #5e3fd7;
-  color: $color-primary;
+    background: #5e3fd7;
+    color: $color-primary;
 }

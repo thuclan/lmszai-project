@@ -2,7 +2,7 @@ import React from 'react';
 import Content from '../../components/content/Content';
 
 function HomePage() {
-    return <Content />;
+	return <Content />;
 }
 
 export default HomePage;
