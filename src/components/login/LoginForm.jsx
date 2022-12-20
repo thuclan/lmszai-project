@@ -26,76 +26,76 @@ function LoginForm() {
         console.log('Failed:', errorInfo);
     };
     return (
-        <Form
-            name="basic"
-            labelCol={{
+      <Form
+        name="basic"
+        labelCol={{
                 span: 8
             }}
-            wrapperCol={{
+        wrapperCol={{
                 span: 16
             }}
-            initialValues={{
+        initialValues={{
                 remember: true
             }}
-            onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
-            autoComplete="off">
-            <Form.Item
-                label="Username"
-                name="username"
-                rules={[
+        onFinish={onFinish}
+        onFinishFailed={onFinishFailed}
+        autoComplete="off">
+        <Form.Item
+          label="Username"
+          name="username"
+          rules={[
                     {
                         required: true,
                         message: 'Please input your username!'
                     }
                 ]}>
-                <Input />
-            </Form.Item>
+          <Input />
+        </Form.Item>
 
-            <Form.Item
+        <Form.Item
                 // label="Password"
-                name="password"
-                rules={[
+          name="password"
+          rules={[
                     {
                         required: true,
                         message: 'Please input your password!'
                     }
                 ]}>
-                <Input.Password />
-            </Form.Item>
+          <Input.Password />
+        </Form.Item>
 
-            <Form.Item
-                name="remember"
-                valuePropName="checked"
-                wrapperCol={{
+        <Form.Item
+          name="remember"
+          valuePropName="checked"
+          wrapperCol={{
                     offset: 8,
                     span: 16
                 }}
             />
 
-            <Form.Item
-                wrapperCol={{
+        <Form.Item
+          wrapperCol={{
                     offset: 8,
                     span: 16
                 }}>
-                <Space direction="vertical">
-                    <Space.Compact block className="btn-group">
-                        <Button className="btn" htmlType="submit">
-                            Sign In
-                        </Button>
-                        <Button className="btn btn-google" htmlType="submit">
-                            Sign In With Google
-                        </Button>
-                        <Button className="btn btn-facebook" htmlType="submit">
-                            Sign In With FaceBook
-                        </Button>
-                        <Button className="btn btn-twitter" htmlType="submit">
-                            Sign In With Twitter
-                        </Button>
-                    </Space.Compact>
-                </Space>
-            </Form.Item>
-        </Form>
+          <Space direction="vertical">
+            <Space.Compact block className="btn-group">
+              <Button className="btn" htmlType="submit">
+                Sign In
+              </Button>
+              <Button className="btn btn-google" htmlType="submit">
+                Sign In With Google
+              </Button>
+              <Button className="btn btn-facebook" htmlType="submit">
+                Sign In With FaceBook
+              </Button>
+              <Button className="btn btn-twitter" htmlType="submit">
+                Sign In With Twitter
+              </Button>
+            </Space.Compact>
+          </Space>
+        </Form.Item>
+      </Form>
     );
 }
 

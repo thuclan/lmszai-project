@@ -1,74 +1,74 @@
 .login {
-  display: flex;
-  /*  height: 100vh;
+    display: flex;
+    /*  height: 100vh;
   width: 100vw; */
 
-  &__left {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 30px 100px;
-    max-width: 760px;
-    p {
-      margin-top: 100px;
-      font-size: 26px;
-      line-height: 137%;
-      color: $color-primary;
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 30px 100px;
+        max-width: 760px;
+        p {
+            margin-top: 100px;
+            font-size: 26px;
+            line-height: 137%;
+            color: $color-primary;
+        }
+
+        img {
+            width: 560px;
+            height: auto;
+            max-width: 100%;
+        }
     }
 
-    img {
-      width: 560px;
-      height: auto;
-      max-width: 100%;
+    &__right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background: $color-primary;
+        .btn-group {
+            display: flex;
+            gap: 12px;
+            flex-direction: column;
+
+            .btn-google {
+                background: #db4437;
+                border: 1px solid #db4437;
+                :hover {
+                    color: #db4437;
+                    background: $color-primary;
+                }
+            }
+
+            .btn-facebook {
+                background: #3b5998;
+                border: 1px solid #3b5998;
+
+                :hover {
+                    color: #3b5998;
+                    background: $color-primary;
+                }
+            }
+
+            .btn-twitter {
+                background: #55acee;
+                border: 1px solid #55acee;
+
+                :hover {
+                    color: #55acee;
+                    background: $color-primary;
+                }
+            }
+        }
     }
-  }
-
-  &__right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background: $color-primary;
-    .btn-group {
-      display: flex;
-      gap: 12px;
-      flex-direction: column;
-
-      .btn-google {
-        background: #db4437;
-        border: 1px solid #db4437;
-        :hover {
-          color: #db4437;
-          background: $color-primary;
-        }
-      }
-
-      .btn-facebook {
-        background: #3b5998;
-        border: 1px solid #3b5998;
-
-        :hover {
-          color: #3b5998;
-          background: $color-primary;
-        }
-      }
-
-      .btn-twitter {
-        background: #55acee;
-        border: 1px solid #55acee;
-
-        :hover {
-          color: #55acee;
-          background: $color-primary;
-        }
-      }
-    }
-  }
 }
 
 #basic {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
 }

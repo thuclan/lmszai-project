@@ -16,11 +16,11 @@ function Courses() {
         getProducts();
     }, []);
     return (
-        <div className="courses">
-            <Course products={products} content={array[0]} status={false} />
-            <Course products={products} content={array[1]} status />
-            <Course products={products} content={array[2]} status />
-        </div>
+      <div className="courses">
+        <Course products={products} content={array[0]} status={false} />
+        <Course products={products} content={array[1]} status />
+        <Course products={products} content={array[2]} status />
+      </div>
     );
 }
 
