@@ -1,7 +1,7 @@
 import React from 'react';
 
 function TermsCondition() {
-  return <div>TermsCondition</div>;
+    return <div>TermsCondition</div>;
 }
 
 export default TermsCondition;

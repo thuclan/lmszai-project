@@ -2,9 +2,7 @@ import React from 'react';
 import ProductItem from '../../components/product/ProductItem';
 
 function Product() {
-  return (
-    <ProductItem />
-  );
+    return <ProductItem />;
 }
 
 export default Product;

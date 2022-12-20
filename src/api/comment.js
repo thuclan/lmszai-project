@@ -9,21 +9,21 @@ const findById = async (id) => await apiCaller(`/comments/${id}`);
 }; */
 
 const create = async (data) => {
-  const formData = JSON.stringify(data);
-  return await apiCaller('/comments/add', 'post', formData);
+    const formData = JSON.stringify(data);
+    return await apiCaller('/comments/add', 'post', formData);
 };
 
 const update = async ({ id, data }) => {
-  const formData = JSON.stringify(data);
-  return await apiCaller(`/comments/${id}`, 'put', formData);
+    const formData = JSON.stringify(data);
+    return await apiCaller(`/comments/${id}`, 'put', formData);
 };
 
 const __delete = async (id) => await apiCaller(`/comments/${id}`, 'delete');
 
 export const CommentApi = {
-  find,
-  findById,
-  create,
-  update,
-  delete: __delete
+    find,
+    findById,
+    create,
+    update,
+    delete: __delete
 };

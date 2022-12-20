@@ -9,21 +9,21 @@ const findById = async (id) => await apiCaller(`/users/${id}`);
 }; */
 
 const create = async (data) => {
-  const formData = JSON.stringify(data);
-  return await apiCaller('/users/add', 'post', formData);
+    const formData = JSON.stringify(data);
+    return await apiCaller('/users/add', 'post', formData);
 };
 
 const update = async ({ id, data }) => {
-  const formData = JSON.stringify(data);
-  return await apiCaller(`/users/${id}`, 'put', formData);
+    const formData = JSON.stringify(data);
+    return await apiCaller(`/users/${id}`, 'put', formData);
 };
 
 const __delete = async (id) => await apiCaller(`/users/${id}`, 'delete');
 
 export const UserApi = {
-  find,
-  findById,
-  create,
-  update,
-  delete: __delete
+    find,
+    findById,
+    create,
+    update,
+    delete: __delete
 };
