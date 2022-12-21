@@ -11,7 +11,6 @@ import { items, itemsone } from '../../shared/data/data';
 function Course(props) {
 	const { products, content, status } = props;
 	const { Meta } = Card;
-	// console.log("products :>> ", products);
 
 	return (
 		<div className="course">
@@ -44,7 +43,7 @@ function Course(props) {
 					slidesPerView={4}
 					modules={[Autoplay, Pagination, Navigation]}
 					onSlideChange={() => console.log('slide change')}
-					onSwiper={(swiper) => console.log(swiper)}
+					// onSwiper={(swiper) => console.log(swiper)}
 				>
 					{products?.map((product, index) => (
 						<SwiperSlide>

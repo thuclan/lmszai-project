@@ -1,7 +1,12 @@
 import React from 'react';
+import OverLay from '../../overlay/OverLay';
 
 function Contact() {
-	return <div>Contact</div>;
+	return (
+		<div>
+			<OverLay name="Contact Us" />
+		</div>
+	);
 }
 
 export default Contact;

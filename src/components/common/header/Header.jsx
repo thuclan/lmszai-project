@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { CaretDownOutlined, SearchOutlined } from '@ant-design/icons';
 import { Button, Dropdown, Input, Space } from 'antd';
 import { useNavigate } from 'react-router';
@@ -8,40 +8,37 @@ import { logo } from '../../../shared/images';
 
 function Header() {
 	const navigate = useNavigate();
-	const headerRef = useRef(null);
+	 const headerRef = useRef(null);
 
-	// const topPosition = headerRef.current;
-	// console.log("topPosition", topPosition);
+	  useEffect(() => {
+		let lastScrollY = 0;
 
-	// const onScroll = () => {
-	//   const scrollPosition = window.scrollY + window.innerHeight;
+		function handleScroll() {
+			const { scrollY } = window;
+			console.log('scrollY :>> ', scrollY);
+			const header = headerRef.current;
 
-	//   if (topPosition > scrollPosition) {
-	//     console.log("run scroll");
-	//   }
-	// };
+			// Show the header if the scroll position has changed
+			if (scrollY > lastScrollY) {
+				header.classList.add('show');
+			} else {
+				header.classList.remove('show');
+			}
 
-	// useLayoutEffect(() => {
-	//   onScroll();
-	//   window.addEventListener("scroll", onScroll);
-	//   return () => window.removeEventListener("scroll", onScroll);
-	// }, []);
+			// Update the last scroll position
+			lastScrollY = scrollY;
+		}
+
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
 
 	const handleLogin = () => {
 		navigate('/login');
 	};
-
-	/* const headerLogIn = (
-    <Dropdown menu={{ items }} trigger={["hover"]}>
-      <a onClick={(e) => e.preventDefault()}>
-        <Space>
-          Lan
-          <LoginOutlined />
-          <CaretDownOutlined />
-        </Space>
-      </a>
-    </Dropdown>
-  ); */
 
 	return (
 		<header className="header" ref={headerRef}>
@@ -53,12 +50,6 @@ function Header() {
 				</div>
 				<div className="header__container--nav">
 					<div className="header__container--nav--left">
-						{/* { items: itemsone }: cái này là object
-            { items }: đây là anh đang khai báo tắt của { items: items }
-            khi truyền vào { itemsone } nó hiểu là { itemsone: itemsone }
-            thì không đúng với cái intefrace mà menu khai báo
-            okie anh, em cúp nha oke
-            */}
 						<Dropdown menu={{ items: itemsone }} trigger={['hover']}>
 							<a onClick={(e) => e.preventDefault()}>
 								<Space>

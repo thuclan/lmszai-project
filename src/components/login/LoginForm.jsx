@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import { Button, Form, Input, Space } from 'antd';
 /* import { FacebookOutlined, GoogleOutlined } from "@ant-design/icons";
@@ -40,8 +41,16 @@ function LoginForm() {
 			onFinish={onFinish}
 			onFinishFailed={onFinishFailed}
 			autoComplete="off">
+			<h5>Sign In</h5>
+			<p>
+				New User ?
+				<Button type="ghost">
+					<li>Create An Account</li>
+				</Button>
+			</p>
+
 			<Form.Item
-				// label="Username"
+				label="Username"
 				name="username"
 				rules={[
 					{
@@ -53,7 +62,7 @@ function LoginForm() {
 			</Form.Item>
 
 			<Form.Item
-				// label="Password"
+				label="Password"
 				name="password"
 				rules={[
 					{
@@ -68,31 +77,33 @@ function LoginForm() {
 				name="remember"
 				valuePropName="checked"
 				wrapperCol={{
-					offset: 8,
+					// offset: 8,
 					span: 16
-				}}
-			/>
+				}}>
+				<Button type="ghost">
+					<li>Forgot Password?</li>
+				</Button>
+			</Form.Item>
 
 			<Form.Item
 				wrapperCol={{
-					offset: 8,
 					span: 16
 				}}>
-				<Space direction="vertical">
-					<Space.Compact block className="btn-group">
-						<Button className="btn" htmlType="submit">
-							Sign In
-						</Button>
-						<Button className="btn btn-google" htmlType="submit">
-							Sign In With Google
-						</Button>
-						<Button className="btn btn-facebook" htmlType="submit">
-							Sign In With FaceBook
-						</Button>
-						<Button className="btn btn-twitter" htmlType="submit">
-							Sign In With Twitter
-						</Button>
-					</Space.Compact>
+				<Space className="btn-group" direction="vertical">
+					{/* <Space.Compact block> */}
+					<Button className="btn" htmlType="submit">
+						Sign In
+					</Button>
+					<Button className="btn btn-google" htmlType="submit">
+						Sign In With Google
+					</Button>
+					<Button className="btn btn-facebook" htmlType="submit">
+						Sign In With FaceBook
+					</Button>
+					<Button className="btn btn-twitter" htmlType="submit">
+						Sign In With Twitter
+					</Button>
+					{/* </Space.Compact> */}
 				</Space>
 			</Form.Item>
 		</Form>

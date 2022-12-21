@@ -1,7 +1,12 @@
 import React from 'react';
+import OverLay from '../../overlay/OverLay';
 
 function About() {
-	return <div>About</div>;
+	return (
+		<div>
+			<OverLay name="About" />
+		</div>
+	);
 }
 
 export default About;
