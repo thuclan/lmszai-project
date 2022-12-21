@@ -122,4 +122,35 @@ const array = [
 		icon: 'https://lmszai.zainikthemes.com/uploads_demo/about_us_general/team-members-heading-img.png'
 	}
 ];
-export { items, array, itemsone };
+
+const options = [
+	{
+		value: '1',
+		label: 'All Categories'
+	},
+	{
+		value: '2',
+		label: 'Stay informed'
+	},
+	{
+		value: '3',
+		label: 'Get started'
+	},
+	{
+		value: '4',
+		label: 'Contact support'
+	},
+	{
+		value: '5',
+		label: 'Learn From Experts'
+	},
+	{
+		value: '6',
+		label: 'Course Issue'
+	},
+	{
+		value: '7',
+		label: 'Discuss with Instructor Issue'
+	}
+];
+export { items, array, itemsone, options };
