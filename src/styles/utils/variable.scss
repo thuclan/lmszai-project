@@ -9,3 +9,5 @@ $color-text: #040453;
 $height-header: 100px;
 $height-content: 800px;
 $width-card: 416px;
+$margin-content: calc((100vw - ($width-card * 3 + 2 * 2rem)) / 2);
+$padding-content: calc(15rem - $height-header) 0;

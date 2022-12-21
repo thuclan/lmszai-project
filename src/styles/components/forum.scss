@@ -1,0 +1,53 @@
+.forum {
+    display: flex;
+    padding-top: calc(15rem - $height-header);
+    background: $gradient-overlay-bg;
+    flex-direction: column;
+    height: 100%;
+    &__overlay {
+        display: flex;
+        min-height: 400px;
+        height: 100%;
+        // height: calc(590px - $height-header);
+        justify-content: center;
+        margin: 0 $margin-content;
+        color: $color-primary;
+        h5 {
+            font-size: 32px;
+        }
+        &--left {
+            flex-direction: column;
+            width: 58.33333333%;
+            flex-grow: 2;
+            .ant-form-item-control-input-content {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                flex: 0 0 auto;
+                .ant-input {
+                    background: transparent;
+                    width: 448px;
+                    height: 30px;
+                }
+            }
+        }
+        &--right {
+            align-items: center;
+            flex-grow: 1;
+        }
+    }
+
+    &__content {
+        background: $color-primary;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem $margin-content;
+        &--card {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            flex-direction: row;
+        }
+    }
+}

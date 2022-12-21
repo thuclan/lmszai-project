@@ -1,11 +1,14 @@
 .header {
-    // position: fixed;
     width: 100%;
     height: $height-header;
     z-index: 10;
     padding: 20px 100px;
     margin: 0 auto;
+    border-bottom: 1px solid #4d4c4c;
 
+    /* Add a transition for the transform and opacity properties */
+
+    opacity: 1;
     &__container {
         display: flex;
         align-items: center;
@@ -60,4 +63,13 @@
             }
         }
     }
+}
+
+.header.show {
+    /* Show the header */
+    position: fixed;
+    background: $gradient-overlay-bg;
+    display: block;
+    animation: slideUpDown 1s ease-in-out;
+    opacity: 1;
 }

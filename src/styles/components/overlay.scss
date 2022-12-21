@@ -1,0 +1,6 @@
+ol li:nth-child(2)::before {
+    float: left;
+    content: '/';
+    color: $color-text-white;
+    padding-right: 0.5rem;
+}

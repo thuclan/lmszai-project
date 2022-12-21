@@ -3,7 +3,7 @@
     flex: 0;
     background: $gradient-overlay-bg;
     &__container {
-        margin: 0 calc((100vw - ($width-card * 3 + 2 * 2rem)) / 2);
+        margin: 0 $margin-content;
         display: flex;
         flex-direction: column;
         color: $color-primary;
