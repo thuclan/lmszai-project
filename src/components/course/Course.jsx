@@ -43,7 +43,6 @@ function Course(props) {
 					slidesPerView={4}
 					modules={[Autoplay, Pagination, Navigation]}
 					onSlideChange={() => console.log('slide change')}
-					// onSwiper={(swiper) => console.log(swiper)}
 				>
 					{products?.map((product, index) => (
 						<SwiperSlide>
