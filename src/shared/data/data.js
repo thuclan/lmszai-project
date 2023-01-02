@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const itemsone = [
 	{
-		label: <Link to="/build">Development</Link>,
+		label: <Link to="/category/courses/development">Development</Link>,
 		key: '0',
 		children: [
 			{
@@ -24,7 +24,7 @@ const itemsone = [
 		]
 	},
 	{
-		label: <Link to="/business">Business</Link>,
+		label: <Link to="/category/courses/business">Business</Link>,
 		key: '5',
 		children: [
 			{
@@ -34,7 +34,7 @@ const itemsone = [
 		]
 	},
 	{
-		label: <Link to="/it-software">IT &amp; Software</Link>,
+		label: <Link to="/category/courses/it-software">IT &amp; Software</Link>,
 		key: '7',
 		children: [
 			{
@@ -48,7 +48,7 @@ const itemsone = [
 		]
 	},
 	{
-		label: <Link to="/design">Design</Link>,
+		label: <Link to="/category/courses/design">Design</Link>,
 		key: '10',
 		children: [
 			{
