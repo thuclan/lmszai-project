@@ -8,6 +8,7 @@
         flex-direction: column;
         justify-content: flex-start;
         padding: 30px 100px;
+        background: $gradient-overlay-bg;
         max-width: 760px;
         p {
             margin-top: 100px;
@@ -87,6 +88,19 @@
         :hover {
             color: #55acee;
             background: $color-primary;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .login {
+        display: flex;
+        flex-direction: column;
+        &__left {
+            display: none;
+        }
+        .btn {
+            min-width: 50px;
         }
     }
 }

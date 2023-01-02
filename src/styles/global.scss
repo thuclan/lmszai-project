@@ -11,6 +11,7 @@
 @import './components/forum.scss';
 @import './components/overlay.scss';
 @import './components/discuss.scss';
+@import './components/product.scss';
 
 * {
     padding: 0;
@@ -22,19 +23,17 @@ html,
 body {
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
         Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    margin: 0 auto;
-    background: $gradient-overlay-bg;
+    background: $color-primary;
+
+    li {
+        list-style-type: none;
+    }
 }
 
 #root {
-    position: relative;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-li {
-    list-style-type: none;
 }
 
 li:hover {
@@ -48,9 +47,10 @@ a {
 
 main {
     display: flex;
+    height: 100%;
     background: $color-primary;
     flex-direction: column;
-    flex: 1;
+    flex-grow: 1;
 }
 
 .btn {

@@ -1,28 +1,33 @@
 .header {
-    width: 100%;
-    height: $height-header;
-    z-index: 10;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-height: $height-header;
+    background: $gradient-overlay-bg;
     padding: 20px 100px;
     margin: 0 auto;
+    width: 100%;
     border-bottom: 1px solid #4d4c4c;
-
-    /* Add a transition for the transform and opacity properties */
-
+    z-index: 100;
     opacity: 1;
     &__container {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         height: 100%;
+        width: 100%;
         padding: 0 1.2rem;
 
         &--logo {
             font-size: 12px;
             margin-right: 30px;
+            flex-grow: 0;
         }
 
         &--nav {
+            font-size: 16px;
+            flex-grow: 1;
             display: flex;
-            flex: 1 1000px;
             position: relative;
             padding: 12px 0;
             align-items: center;
@@ -33,12 +38,16 @@
                 margin-right: 18rem;
                 padding-left: 3rem;
                 flex-grow: 2;
+
+                .ant-input-affix-wrapper {
+                    min-width: 100%;
+                }
+
                 a {
                     background-color: #fff;
                     margin: 12px 0;
                     padding: 8px 20px;
                     font-weight: 600;
-                    color: $color-text;
                     border-radius: 4px;
                 }
                 .ant-input {
@@ -53,7 +62,6 @@
                 justify-content: flex-end;
                 align-items: center;
                 a {
-                    font-size: 16px;
                     padding: 0 10px;
                     font-weight: 400;
                     color: $color-primary;
@@ -62,7 +70,15 @@
                 }
             }
         }
+
+        .navbar-toggle {
+            display: none;
+        }
     }
+}
+
+.text {
+    color: #000 !important;
 }
 
 .header.show {
@@ -72,4 +88,92 @@
     display: block;
     animation: slideUpDown 1s ease-in-out;
     opacity: 1;
+}
+
+@media (max-width: 1400px) {
+    .header {
+        padding: 20px 50px;
+        &__container {
+            padding: 0;
+
+            &--logo {
+                margin-right: 0px;
+            }
+
+            &--nav {
+                font-size: 10px;
+                padding: 0;
+                &--left {
+                    margin-right: 100px;
+                    a {
+                        font-size: 10px;
+                    }
+
+                    .ant-space {
+                        font-size: 10px;
+                    }
+
+                    .ant-input-affix-wrapper {
+                        min-width: 80%;
+                    }
+                }
+
+                &--right {
+                    a {
+                    }
+                    .ant-space-item {
+                        font-size: 10px;
+                    }
+                    .ant-btn {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .header {
+        padding: 20px;
+        &__container {
+            .ant-input-affix-wrapper {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        padding: 20px;
+        &__container {
+            width: 100%;
+            &--nav {
+                display: none;
+            }
+            &--nav {
+                display: none;
+                .show {
+                    top: 18px;
+                    background: #6c0c0c;
+                    position: relative;
+                    padding: 30px;
+                    box-shadow: 0 0 8px 0 rgb(1 0 64 / 7%);
+                    overflow-y: auto;
+                    height: calc(100vh - 80px);
+                }
+            }
+
+            .navbar-toggle {
+                display: inline;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .navbar-toggle {
+        margin-left: 20px;
+    }
 }

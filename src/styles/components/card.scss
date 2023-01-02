@@ -1,12 +1,11 @@
 .card {
-    height: 168px;
-    width: $width-card;
+    max-width: $width-card;
+    height: auto;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 4px;
     background-color: $color-primary;
     &__item {
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
         padding: 44px 28px;
 

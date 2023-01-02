@@ -1,20 +1,20 @@
 .forum {
     display: flex;
-    padding-top: calc(15rem - $height-header);
-    background: $gradient-overlay-bg;
+    padding-top: $height-header;
+    background: $color-primary;
     flex-direction: column;
     height: 100%;
     &__overlay {
         display: flex;
         min-height: 400px;
-        height: 100%;
-        // height: calc(590px - $height-header);
+        background: $gradient-overlay-bg;
         justify-content: center;
-        margin: 0 $margin-content;
+        padding: 2rem calc((100vw - (1248px + 4rem)) / 2);
         color: $color-primary;
         h5 {
             font-size: 32px;
         }
+
         &--left {
             flex-direction: column;
             width: 58.33333333%;
@@ -31,9 +31,14 @@
                 }
             }
         }
+
         &--right {
             align-items: center;
             flex-grow: 1;
+            img {
+                max-width: 100%;
+                height: auto;
+            }
         }
     }
 

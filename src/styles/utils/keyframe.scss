@@ -138,3 +138,18 @@
         transform: scale(1);
     }
 }
+
+@keyframes spin {
+    0% {
+        content: 'platform';
+        transform: rotateX(360deg);
+    }
+    50% {
+        content: 'era';
+        transform: rotateX(360deg);
+    }
+    100% {
+        content: 'future';
+        transform: rotateX(360deg);
+    }
+}
