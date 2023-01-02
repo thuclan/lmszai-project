@@ -32,7 +32,7 @@ function Forum() {
 					</Form>
 				</div>
 				<div className="forum__overlay--right">
-					<img src={forum} alt="forum" style={{ height: 254, width: 450 }} />
+					<img src={forum} alt="forum" />
 				</div>
 			</div>
 			<div className="forum__content">

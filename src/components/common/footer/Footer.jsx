@@ -26,7 +26,7 @@ function Footer() {
 							IncapAble Of Drawing A Single Stroke At The Present
 						</p>
 
-						<Space>
+						<Space direction="horizontal">
 							<a href="https://www.facebook.com/">
 								<AiFillFacebook />
 							</a>

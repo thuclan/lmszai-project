@@ -15,6 +15,7 @@ function Courses() {
 	useEffect(() => {
 		getProducts();
 	}, []);
+
 	return (
 		<div className="courses">
 			<Course products={products} content={array[0]} status={false} />

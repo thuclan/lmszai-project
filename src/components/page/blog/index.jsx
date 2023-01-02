@@ -4,9 +4,7 @@ import OverLay from '../../overlay/OverLay';
 function Blog() {
 	return (
 		<div>
-			<div>
-				<OverLay name="Blog" />
-			</div>
+			<OverLay name="Blog" />
 		</div>
 	);
 }

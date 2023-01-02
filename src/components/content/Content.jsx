@@ -15,18 +15,10 @@ function Content() {
 						<div className="text-animation">
 							<h6>Come for learn</h6>
 							<h1>A Better</h1>
-							<h1>Learning</h1>
-							<div id="flip">
-								<div>
-									<h1>platform</h1>
-								</div>
-								<div>
-									<h1>era</h1>
-								</div>
-								<div>
-									<h1>future</h1>
-								</div>
-							</div>
+							<h1>
+								Learning &nbsp;
+								<span id="spin" />
+							</h1>
 							<h1>Start Here</h1>
 							<p>
 								While The Lovely Valley Teems With Vapour Around Me, And The
@@ -37,20 +29,20 @@ function Content() {
 							</Button>
 						</div>
 					</div>
-					<div className="content__container--item">
+					<div className="content__container--hero">
 						<img src={hero} alt="hero-img" />
 					</div>
 				</div>
-				<div className="content__card">
-					{cards.map((card) => (
-						<Card
-							title={card.title}
-							key={card.key}
-							content={card.content}
-							icon={card.icon}
-						/>
-					))}
-				</div>
+			</div>
+			<div className="content__card">
+				{cards.map((card) => (
+					<Card
+						title={card.title}
+						key={card.key}
+						content={card.content}
+						icon={card.icon}
+					/>
+				))}
 			</div>
 			<div className="box">
 				<Courses />

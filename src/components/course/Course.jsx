@@ -7,6 +7,10 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { ArrowRightOutlined } from '@ant-design/icons';
 import { items, itemsone } from '../../shared/data/data';
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 function Course(props) {
 	const { products, content, status } = props;
@@ -39,11 +43,13 @@ function Course(props) {
 			</div>
 			<div className="course__content">
 				<Swiper
+					modules={[Autoplay, Pagination, Navigation]}
 					spaceBetween={50}
 					slidesPerView={4}
-					modules={[Autoplay, Pagination, Navigation]}
-					onSlideChange={() => console.log('slide change')}
-				>
+					navigation
+					pagination={{ clickable: true }}
+					scrollbar={{ draggable: true }}
+					onSlideChange={() => console.log('slide change')}>
 					{products?.map((product, index) => (
 						<SwiperSlide>
 							<Link to={`/product-detail/${product.title}`} state={{ product }}>
@@ -57,8 +63,7 @@ function Course(props) {
 											src={product.thumbnail}
 											style={{ height: 200 }}
 										/>
-									)}
-								>
+									)}>
 									<Meta
 										title={product.brand}
 										description={product.description}

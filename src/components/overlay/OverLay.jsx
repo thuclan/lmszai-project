@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 function OverLay(props) {
-	const { name } = props;
+	const { name, category } = props;
 	return (
 		<Wrapper>
 			<Title>{name}</Title>
@@ -15,6 +15,11 @@ function OverLay(props) {
 					<Li>
 						<Link>{name}</Link>
 					</Li>
+					{category ? (
+						<Li>
+							<Link>{category}</Link>
+						</Li>
+					) : ''}
 				</Ol>
 			</nav>
 		</Wrapper>

@@ -1,24 +1,27 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Form, Input, Space } from 'antd';
-/* import { FacebookOutlined, GoogleOutlined } from "@ant-design/icons";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { auth } from "../../utils/firebase"; */
-
-// import { app } from "../../utils/firebase";
+import { useNavigate } from 'react-router';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth, signInWithGoogle } from '../../utils/firebase';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 
 function LoginForm() {
-	// Sign in with google
-	/* const googleProvider = new GoogleAuthProvider();
-  const GoogleLogin = async () => {
-    try {
-      console.log("login");
-      const result = await signInWithPopup(auth, googleProvider);
-      console.log(result.user);
-    } catch (error) {
-      console.log(error);
-    }
-  }; */
+	const [value, setValue] = useState({
+		email: '',
+		password: ''
+	});
+	const [user, loading, error] = useAuthState(auth);
+	const navigate = useNavigate();
+
+	useEffect(() => {
+		if (loading) {
+			// maybe trigger a loading screen
+			return;
+		}
+		if (user) navigate('/');
+	}, [user, loading]);
+
 	const onFinish = (values) => {
 		console.log('Received values of form: ', values);
 	};
@@ -58,7 +61,7 @@ function LoginForm() {
 						message: 'Please input your username!'
 					}
 				]}>
-				<Input />
+				<Input value={value.email} onChange={(e) => setValue(e.target.value)} />
 			</Form.Item>
 
 			<Form.Item
@@ -70,7 +73,7 @@ function LoginForm() {
 						message: 'Please input your password!'
 					}
 				]}>
-				<Input.Password />
+				<Input.Password value={value.password} onChange={(e) => setValue(e.target.value)} />
 			</Form.Item>
 
 			<Form.Item
@@ -91,10 +94,13 @@ function LoginForm() {
 				}}>
 				<Space className="btn-group" direction="vertical">
 					{/* <Space.Compact block> */}
-					<Button className="btn" htmlType="submit">
+					<Button
+						className="btn"
+						htmlType="submit"
+						onClick={() => signInWithEmailAndPassword(value.email, value.password)}>
 						Sign In
 					</Button>
-					<Button className="btn btn-google" htmlType="submit">
+					<Button className="btn btn-google" htmlType="submit" onClick={signInWithGoogle}>
 						Sign In With Google
 					</Button>
 					<Button className="btn btn-facebook" htmlType="submit">
