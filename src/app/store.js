@@ -5,6 +5,5 @@ import filterReducer from '../features/course/filterSlice';
 export default configureStore({
 	reducer: {
 		counter: counterReducer,
-		filter: filterReducer
 	}
 });
