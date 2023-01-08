@@ -19,6 +19,7 @@ import Business from './components/page/courses/business';
 import Design from './components/page/courses/design';
 import ItSoftware from './components/page/courses/itsoftware';
 import Dashboard from './page/dashboard';
+import BlogItem from './components/page/blog/BlogItem';
 
 function App() {
 	return (
@@ -38,6 +39,8 @@ function App() {
 				<Route path="/category/courses/it-software" element={<ItSoftware />} />
 				<Route path="/category/courses/design" element={<Design />} />
 				<Route path="/product-detail/:productCode" element={<Product />} />
+				<Route path="/blog-detail/:blogCode" element={<BlogItem />} />
+
 			</Route>
 			<Route path="/login" element={<LogInPage />} />
 			<Route path="/admin/dashboard" element={<Dashboard />} />

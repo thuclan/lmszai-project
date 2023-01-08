@@ -153,4 +153,42 @@ const options = [
 		label: 'Discuss with Instructor Issue'
 	}
 ];
-export { items, array, itemsone, options };
+
+const supports = [
+	{
+		key: 0,
+		question: '1. Where can I see the status of my refund?',
+		answer: 'In the Refund Status column you can see the date your refund request was submitted or when it was processed.'
+	},
+	{
+		key: 1,
+		question: '2. When will I receive my refund?',
+		answer: 'Refund requests are submitted immediately to your payment processor or financial institution after Udemy has received and processed your request. It may take 5 to 10 business days or longer to post the funds in your account, depending on your financial institution or location.'
+	},
+	{
+		key: 2,
+		question: '3. Why was my refund request denied?',
+		answer: 'All eligible courses purchased on Udemy can be refunded within 30 days, provided the request meets the guidelines in our refund policy.'
+	},
+	{
+		key: 3,
+		question: '4. What is a “credit refund”?',
+		answer: 'In cases where a transaction is not eligible for a refund to your original payment method, the refund will be granted using LMSZAI Credit'
+	},
+	{
+		key: 4,
+		question: '5. Where can I see the status of  my refund?',
+		answer: 'In the Refund Status column you can see the date your refund request was submitted or when it was processed.'
+	},
+	{
+		key: 5,
+		question: '6. When will I receive my refund?',
+		answer: 'Refund requests are submitted immediately to your payment processor or financial institution after Udemy has received and processed your request. It may take 5 to 10 business days or longer to post the funds in your account, depending on your financial institution or location.'
+	},
+	{
+		key: 6,
+		question: '7. Why was my refund request denied?',
+		answer: 'All eligible courses purchased on Udemy can be refunded within 30 days, provided the request meets the guidelines in our refund policy.'
+	}
+];
+export { items, array, itemsone, options, supports };
