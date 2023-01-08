@@ -9,7 +9,6 @@ import { ArrowRightOutlined } from '@ant-design/icons';
 import { items, itemsone } from '../../shared/data/data';
 import 'swiper/css';
 import 'swiper/css/autoplay';
-import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 function Course(props) {
@@ -43,7 +42,7 @@ function Course(props) {
 			</div>
 			<div className="course__content">
 				<Swiper
-					modules={[Autoplay, Pagination, Navigation]}
+					modules={[Autoplay, Navigation]}
 					spaceBetween={50}
 					slidesPerView={4}
 					navigation
@@ -51,10 +50,9 @@ function Course(props) {
 					scrollbar={{ draggable: true }}
 					onSlideChange={() => console.log('slide change')}>
 					{products?.map((product, index) => (
-						<SwiperSlide>
+						<SwiperSlide key={index}>
 							<Link to={`/product-detail/${product.title}`} state={{ product }}>
 								<Card
-									key={index}
 									hoverable
 									style={{ width: 290, height: 350 }}
 									cover={(

@@ -1,6 +1,7 @@
+/* eslint-disable consistent-return */
 import React, { useEffect, useRef, useState } from 'react';
 import { BarsOutlined, CaretDownOutlined, SearchOutlined, ShoppingCartOutlined } from '@ant-design/icons';
-import { Button, Dropdown, Input, Space } from 'antd';
+import { Button, Dropdown, Form, Input, Space } from 'antd';
 import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 import { items, itemsone } from '../../../shared/data/data';
@@ -11,17 +12,25 @@ import styled from 'styled-components';
 import Info from '../../info/index ';
 import { useSelector } from 'react-redux';
 import { ProductApi } from '../../../api/product';
-import { query } from 'firebase/firestore';
 
 function Header() {
 	const quantity = useSelector((state) => state.counter.value);
 	const [open, setOpen] = useState(false);
+	const [state, setState] = useState({
+		query: '',
+		list: []
+	});
 	const [openNav, setOpenNav] = useState(false);
 	const navigate = useNavigate();
 	const [user, loading, error] = useAuthState(auth);
 	const headerRef = useRef(null);
+	const [products, setProducts] = useState([]);
+	const getProducts = async () => {
+		const res = await ProductApi.find();
+		setProducts(res.products);
+	};
 
-	  useEffect(() => {
+	useEffect(() => {
 		let lastScrollY = 0;
 
 		function handleScroll() {
@@ -37,6 +46,8 @@ function Header() {
 			lastScrollY = scrollY;
 		}
 
+		getProducts();
+
 		window.addEventListener('scroll', handleScroll);
 
 		return () => {
@@ -44,8 +55,27 @@ function Header() {
 		};
 	}, []);
 
+	const handleChange = (e) => {
+		const results = products.filter((product) => {
+			if (e.target.value === '') { return products; }
+			return product.title;
+		});
+		setState({
+			// query: e.target.value,
+			list: []
+		});
+	};
+
+	/* useEffect(() => {
+		handleChange();
+	}, [state.query]);
+ */
 	const handleLogin = () => {
 		navigate('/login');
+	};
+
+	const handleOpen = () => {
+		setOpen(!open);
 	};
 
 	const Profile = (open
@@ -72,18 +102,29 @@ function Header() {
 								</Space>
 							</a>
 						</Dropdown>
-
-						<Input
-							size="large"
-							placeholder="Search Course..."
-							prefix={<SearchOutlined />}
-							style={{
-								marginLeft: '30px',
-								borderRadius: '24px',
-								backgroundColor: 'transparent'
-							}}
-						/>
-
+						<Form>
+							<Form.Item>
+								<Input
+									size="large"
+									value={state.query}
+									onChange={handleChange}
+									placeholder="Search Course..."
+									prefix={<SearchOutlined />}
+									style={{
+										marginLeft: '30px',
+										borderRadius: '24px',
+										backgroundColor: 'transparent'
+									}}
+								/>
+							</Form.Item>
+							{/* <ul>
+								{state.query === ''
+									? ''
+									: state.list.map((product) => {
+										return <li key={product.title}>{product.title}</li>;
+									})}
+							</ul> */}
+						</Form>
 					</div>
 
 					<div className="header__container--nav--right">
@@ -105,9 +146,9 @@ function Header() {
 						</Cart>
 						<Button
 							type="ghost"
-							onClick={user ? setOpen(!open) : handleLogin}
+							onClick={user ? handleOpen : handleLogin}
 							className={user ? '' : 'btn'}>
-							{user ? <Img src={user?.photoURL} alt="avt" /> : 'Sign Up'}
+							{user ? <Img src={user.photoURL} alt="avt" /> : 'Sign Up'}
 							{Profile}
 						</Button>
 					</div>
@@ -127,16 +168,17 @@ const Img = styled.img`
      height: 32px;
 	 width: 32px;
 	 border-radius: 50%;
-`;
+	 `;
 
-const Cart = styled.div`
-    position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
+	 const Cart = styled.div`
+	 position: relative;
+	 margin-right: 4px;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 height: 32px;
+	 width: 32px;
+	 border-radius: 50%;
 	background: #fff;
 `;
 

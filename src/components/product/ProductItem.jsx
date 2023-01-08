@@ -1,13 +1,15 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable jsx-a11y/alt-text */
 import { BarChartOutlined, BookOutlined, ClockCircleOutlined, DownloadOutlined, GlobalOutlined, HeartOutlined, ReadOutlined, SafetyCertificateOutlined, ShareAltOutlined, StarOutlined, TeamOutlined, VideoCameraOutlined } from '@ant-design/icons';
 import { Button, Space, Tabs } from 'antd';
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { increment } from '../../features/counter/counterSlice';
 
-function ProductItem() {
+function ProductItem({ user }) {
 	const { state } = useLocation(); // <-- access route state
 	const dispatch = useDispatch();
 
@@ -75,7 +77,7 @@ function ProductItem() {
 	];
 
 	const handleSubmit = () => {
-	  dispatch(increment({}));
+	  user ? dispatch(increment({})) : toast('You need to login first!');
 	};
 
 	return product ? (
@@ -133,7 +135,9 @@ function ProductItem() {
 						</Li>
 					</Ul>
 					<Space wrap direction="vertical">
-						<Button className="btn" onClick={handleSubmit}>Enroll the Course</Button>
+						<Button className="btn" onClick={handleSubmit}>
+							Enroll the Course
+						</Button>
 						<Space.Compact direction="horizontal">
 							<Button>
 								<HeartOutlined />
