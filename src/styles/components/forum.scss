@@ -1,14 +1,15 @@
 .forum {
     display: flex;
-    background: $color-primary;
+    background: $gradient-overlay-bg;
     flex-direction: column;
     height: 100%;
+    padding: 200px 0 100px;
     &__overlay {
         display: flex;
         min-height: 400px;
         background: $gradient-overlay-bg;
         justify-content: center;
-        padding: $height-header calc((100vw - (1248px + 4rem)) / 2);
+        padding: 0 calc((100vw - (1248px + 4rem)) / 2);
         color: $color-primary;
         h5 {
             font-size: 32px;

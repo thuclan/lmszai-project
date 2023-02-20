@@ -55,21 +55,25 @@ function Header() {
 		};
 	}, []);
 
-	const handleChange = (e) => {
+	const handleChange = (event) => {
+		event.preventDefault();
 		const results = products.filter((product) => {
-			if (e.target.value === '') { return products; }
+			if (event.target.value === '') {
+				return products;
+			}
 			return product.title;
 		});
+
 		setState({
-			// query: e.target.value,
-			list: []
+			query: event.target.value,
+			list: results
 		});
 	};
 
-	/* useEffect(() => {
-		handleChange();
-	}, [state.query]);
- */
+	// /* useEffect(() => {
+	// 	handleChange();
+	// }, [state.query]); */
+
 	const handleLogin = () => {
 		navigate('/login');
 	};

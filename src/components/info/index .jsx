@@ -9,7 +9,6 @@ import { auth, logout } from '../../utils/firebase';
 
 function Info() {
     	const [user, loading, error] = useAuthState(auth);
-	console.log('user :>> ', user);
 
 	return (
 		<Wrapper>

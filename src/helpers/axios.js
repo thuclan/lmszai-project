@@ -12,7 +12,7 @@ const apiCaller = async (endpoint, method, data, extraHeaders) => {
 	try {
 		const axiosConfig = {
 			method: method || 'get',
-			url: `https://dummyjson.com${endpoint}`,
+			url: `https://dummyjson.onrender.com${endpoint}`,
 			data: data || undefined,
 			headers: { ...(extraHeaders || {}) }
 		};

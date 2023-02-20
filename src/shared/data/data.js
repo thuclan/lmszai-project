@@ -191,4 +191,27 @@ const supports = [
 		answer: 'All eligible courses purchased on Udemy can be refunded within 30 days, provided the request meets the guidelines in our refund policy.'
 	}
 ];
-export { items, array, itemsone, options, supports };
+
+const events = [
+	{
+		title: 'Mere tranquil existence',
+		content:
+            'Possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart...'
+	},
+	{
+		title: 'Incapable of drawing',
+		content:
+            'Exquisite sense of mere tranquil existence that I neglect my talents add should be incapable of draw...'
+	},
+	{
+		title: 'Foliage access trees',
+		content:
+            'Serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy w...'
+	},
+	{
+		title: 'Among grass trickling',
+		content:
+            'Should be incapable of drawing a single stroke at the present moment; and yet I feel that I never'
+	}
+];
+export { items, array, itemsone, options, supports, events };

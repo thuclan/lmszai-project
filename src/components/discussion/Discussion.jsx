@@ -34,9 +34,6 @@ function Discussion() {
 					<CardDiscuss />
 					<CardDiscuss />
 					<CardDiscuss />
-					<CardDiscuss />
-					<CardDiscuss />
-					<CardDiscuss />
 				</Box>
 			</FlexBox>
 

@@ -14,7 +14,6 @@ import 'swiper/css/navigation';
 function Course(props) {
 	const { products, content, status } = props;
 	const { Meta } = Card;
-
 	return (
 		<div className="course">
 			<div className="course__text">
@@ -58,7 +57,7 @@ function Course(props) {
 									cover={(
 										<img
 											alt={product.brand}
-											src={product.thumbnail}
+											src={product?.thumbnail}
 											style={{ height: 200 }}
 										/>
 									)}>
